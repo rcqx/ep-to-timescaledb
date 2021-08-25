@@ -1,4 +1,4 @@
-from rdflib import RDF, RDFS, OWL, Namespace, Graph
+from rdflib import RDF, RDFS, OWL, Namespace, Graph, Literal
 
 g = Graph()
 
@@ -8,6 +8,10 @@ BLDG = Namespace("http://example.com/5ZoneOffice#")
 g.bind("bldg", BLDG)
 BOT = Namespace("https://w3c-lbd-cg.github.io/bot#")
 g.bind("bot", BOT)
+UNIT = Namespace("http://qudt.org/vocab/unit/")
+g.bind("unit", UNIT)
+
+# SIM = Namespace("http://example.com/Simulation#")
 
 # site
 g.add((BLDG.Site, RDF.type, BOT.Site))
@@ -51,9 +55,17 @@ g.add((BLDG["TS_Core"], RDF.type, BOT.Element))
 # Relationships of Building
 g.add((BLDG.Site, BOT.hasBuilding, BLDG.office_building))
 g.add((BLDG.office_building, BOT.hasStorey, BLDG.office))
+
 # relations for North zone
 g.add((BLDG.office, BOT.hasSpace, BLDG.office_N))
 g.add((BLDG.ZONE_N, BOT.hasSpace, BLDG.office_N))
+g.add((BLDG.ZONE_N, RDFS.label, Literal("North Zone Temperature")))
+g.add((BLDG.ZONE_N, RDF.value, UNIT.DEG))
+g.add((BLDG.ZONE_N, RDF.value, UNIT.DEG))
+
+
+
+
 g.add((BLDG.ZONE_N, BOT.hasElement, BLDG.thermostatN))
 g.add((BLDG.ZONE_N, BOT.hasElement, BLDG.RHSensor_N))
 g.add((BLDG.office_N, BOT.hasElement, BLDG.wall))
@@ -63,6 +75,8 @@ g.add((BLDG.office_N, BOT.hasElement, BLDG.wall))
 g.add((BLDG.office_N, BOT.hasElement, BLDG.ceiling))
 g.add((BLDG.office_N, BOT.hasElement, BLDG.glassdoor))
 g.add((BLDG.office_N, BOT.hasElement, BLDG.window))
+
+
 # relations for South zone
 g.add((BLDG.office, BOT.hasSpace, BLDG.office_S))
 g.add((BLDG.ZONE_S, BOT.hasSpace, BLDG.office_S))
