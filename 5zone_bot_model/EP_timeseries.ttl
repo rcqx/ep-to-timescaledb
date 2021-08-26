@@ -1,0 +1,86 @@
+@prefix bldg: <http://example.com/5ZoneOffice#> .
+@prefix bot: <https://w3c-lbd-cg.github.io/bot#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+
+bldg:Site a bot:Site ;
+    bot:hasBuilding bldg:office_building .
+
+bldg:ZONE_C a bot:Zone ;
+    bot:hasElement bldg:TS_Core ;
+    bot:hasSpace bldg:office_C .
+
+bldg:ZONE_E a bot:Zone ;
+    bot:hasElement bldg:TS_East ;
+    bot:hasSpace bldg:office_E .
+
+bldg:ZONE_N a bot:Zone ;
+    bot:hasElement bldg:TS_North ;
+    bot:hasSpace bldg:office_N .
+
+bldg:ZONE_S a bot:Zone ;
+    bot:hasElement bldg:TS_South ;
+    bot:hasSpace bldg:office_S .
+
+bldg:ZONE_W a bot:Zone ;
+    bot:hasElement bldg:TS_West ;
+    bot:hasSpace bldg:office_W .
+
+bldg:ceiling a bot:Element .
+
+bldg:glassdoor a bot:Element .
+
+bldg:temp_sensor_C bldg:timeseries [ bldg:hasTimeseriesId "coreZone" ] .
+
+bldg:temp_sensor_E bldg:timeseries [ bldg:hasTimeseriesId "eastZone" ] .
+
+bldg:temp_sensor_N bldg:timeseries [ bldg:hasTimeseriesId "northZone" ] .
+
+bldg:temp_sensor_S bldg:timeseries [ bldg:hasTimeseriesId "southZone" ] .
+
+bldg:temp_sensor_W bldg:timeseries [ bldg:hasTimeseriesId "westZone" ] .
+
+bldg:wall a bot:Element .
+
+bldg:window a bot:Element .
+
+bldg:TS_Core a bot:Element ;
+    rdfs:label "Room temperature measure in Core Office" ;
+    unit:applicableUnit unit:DEG_C .
+
+bldg:TS_East a bot:Element ;
+    rdfs:label "Room temperature measure in East Office" ;
+    unit:applicableUnit unit:DEG_C .
+
+bldg:TS_North a bot:Element ;
+    rdfs:label "Room temperature measure in North Office" ;
+    unit:applicableUnit unit:DEG_C .
+
+bldg:TS_South a bot:Element ;
+    rdfs:label "Room temperature measure in South Office" ;
+    unit:applicableUnit unit:DEG_C .
+
+bldg:TS_West a bot:Element ;
+    rdfs:label "Room temperature measure in West Office" ;
+    unit:applicableUnit unit:DEG_C .
+
+bldg:office a bot:Storey ;
+    bot:hasSpace bldg:office_C,
+        bldg:office_E,
+        bldg:office_N,
+        bldg:office_S,
+        bldg:office_W .
+
+bldg:office_building a bot:Building ;
+    bot:hasStorey bldg:office .
+
+bldg:office_C a bot:Space .
+
+bldg:office_E a bot:Space .
+
+bldg:office_N a bot:Space .
+
+bldg:office_S a bot:Space .
+
+bldg:office_W a bot:Space .
+
