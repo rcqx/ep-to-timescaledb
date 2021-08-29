@@ -59,7 +59,7 @@ g.add((BLDG["TS_North"], RDFS.label, Literal("Room temperature measure in North 
 g.add((BLDG["TS_North"], UNIT.applicableUnit, UNIT.DEG_C))
 ts_ref_N = BNode()
 g.add((ts_ref_N, BLDG.hasTimeseriesId, Literal("northZone")))
-g.add((BLDG.temp_sensor_N, BLDG.timeseries, ts_ref_N))
+g.add((BLDG["TS_North"], BLDG.timeseries, ts_ref_N))
 
 # relations for South zone
 g.add((BLDG.office, BOT.hasSpace, BLDG.office_S))
@@ -69,7 +69,7 @@ g.add((BLDG["TS_South"], RDFS.label, Literal("Room temperature measure in South 
 g.add((BLDG["TS_South"], UNIT.applicableUnit, UNIT.DEG_C))
 ts_ref_S = BNode()
 g.add((ts_ref_S, BLDG.hasTimeseriesId, Literal("southZone")))
-g.add((BLDG.temp_sensor_S, BLDG.timeseries, ts_ref_S))
+g.add((BLDG["TS_South"], BLDG.timeseries, ts_ref_S))
 
 # relations for East zone
 g.add((BLDG.office, BOT.hasSpace, BLDG.office_E))
@@ -79,7 +79,7 @@ g.add((BLDG["TS_East"], RDFS.label, Literal("Room temperature measure in East Of
 g.add((BLDG["TS_East"], UNIT.applicableUnit, UNIT.DEG_C))
 ts_ref_E = BNode()
 g.add((ts_ref_E, BLDG.hasTimeseriesId, Literal("eastZone")))
-g.add((BLDG.temp_sensor_E, BLDG.timeseries, ts_ref_E))
+g.add((BLDG["TS_East"], BLDG.timeseries, ts_ref_E))
 
 # relations for West zone
 g.add((BLDG.office, BOT.hasSpace, BLDG.office_W))
@@ -89,7 +89,7 @@ g.add((BLDG["TS_West"], RDFS.label, Literal("Room temperature measure in West Of
 g.add((BLDG["TS_West"], UNIT.applicableUnit, UNIT.DEG_C))
 ts_ref_W = BNode()
 g.add((ts_ref_W, BLDG.hasTimeseriesId, Literal("westZone")))
-g.add((BLDG.temp_sensor_W, BLDG.timeseries, ts_ref_W))
+g.add((BLDG["TS_West"], BLDG.timeseries, ts_ref_W))
 
 # relations for Core zone
 g.add((BLDG.office, BOT.hasSpace, BLDG.office_C))
@@ -99,7 +99,7 @@ g.add((BLDG["TS_Core"], RDFS.label, Literal("Room temperature measure in Core Of
 g.add((BLDG["TS_Core"], UNIT.applicableUnit, UNIT.DEG_C))
 ts_ref_C = BNode()
 g.add((ts_ref_C, BLDG.hasTimeseriesId, Literal("coreZone")))
-g.add((BLDG.temp_sensor_C, BLDG.timeseries, ts_ref_C))
+g.add((BLDG["TS_Core"], BLDG.timeseries, ts_ref_C))
 
 with open("EP_timeseries.ttl", "wb") as f:
     f.write(g.serialize(format="ttl", encoding='UTF-8'))
