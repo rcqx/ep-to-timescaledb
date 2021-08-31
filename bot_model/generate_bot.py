@@ -58,7 +58,7 @@ g.add((BLDG.ZONE_N, BOT.hasElement, BLDG["TS_North"]))
 g.add((BLDG["TS_North"], RDFS.label, Literal("Room temperature measure in North Office")))
 g.add((BLDG["TS_North"], UNIT.applicableUnit, UNIT.DEG_C))
 ts_ref_N = BNode()
-g.add((ts_ref_N, BLDG.hasTimeseriesId, Literal("northZone")))
+g.add((ts_ref_N, BLDG.hasTimeseriesId, Literal("NorthZone-id")))
 g.add((BLDG["TS_North"], BLDG.timeseries, ts_ref_N))
 
 # relations for South zone
@@ -68,7 +68,7 @@ g.add((BLDG.ZONE_S, BOT.hasElement, BLDG["TS_South"]))
 g.add((BLDG["TS_South"], RDFS.label, Literal("Room temperature measure in South Office")))
 g.add((BLDG["TS_South"], UNIT.applicableUnit, UNIT.DEG_C))
 ts_ref_S = BNode()
-g.add((ts_ref_S, BLDG.hasTimeseriesId, Literal("southZone")))
+g.add((ts_ref_S, BLDG.hasTimeseriesId, Literal("SouthZone-id")))
 g.add((BLDG["TS_South"], BLDG.timeseries, ts_ref_S))
 
 # relations for East zone
@@ -78,7 +78,7 @@ g.add((BLDG.ZONE_E, BOT.hasElement, BLDG["TS_East"]))
 g.add((BLDG["TS_East"], RDFS.label, Literal("Room temperature measure in East Office")))
 g.add((BLDG["TS_East"], UNIT.applicableUnit, UNIT.DEG_C))
 ts_ref_E = BNode()
-g.add((ts_ref_E, BLDG.hasTimeseriesId, Literal("eastZone")))
+g.add((ts_ref_E, BLDG.hasTimeseriesId, Literal("EastZone-id")))
 g.add((BLDG["TS_East"], BLDG.timeseries, ts_ref_E))
 
 # relations for West zone
@@ -88,7 +88,7 @@ g.add((BLDG.ZONE_W, BOT.hasElement, BLDG["TS_West"]))
 g.add((BLDG["TS_West"], RDFS.label, Literal("Room temperature measure in West Office")))
 g.add((BLDG["TS_West"], UNIT.applicableUnit, UNIT.DEG_C))
 ts_ref_W = BNode()
-g.add((ts_ref_W, BLDG.hasTimeseriesId, Literal("westZone")))
+g.add((ts_ref_W, BLDG.hasTimeseriesId, Literal("WestZone-id")))
 g.add((BLDG["TS_West"], BLDG.timeseries, ts_ref_W))
 
 # relations for Core zone
@@ -98,7 +98,7 @@ g.add((BLDG.ZONE_C, BOT.hasElement, BLDG["TS_Core"]))
 g.add((BLDG["TS_Core"], RDFS.label, Literal("Room temperature measure in Core Office")))
 g.add((BLDG["TS_Core"], UNIT.applicableUnit, UNIT.DEG_C))
 ts_ref_C = BNode()
-g.add((ts_ref_C, BLDG.hasTimeseriesId, Literal("coreZone")))
+g.add((ts_ref_C, BLDG.hasTimeseriesId, Literal("CoreZone-id")))
 g.add((BLDG["TS_Core"], BLDG.timeseries, ts_ref_C))
 
 with open("EP_timeseries.ttl", "wb") as f:

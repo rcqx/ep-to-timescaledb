@@ -1,9 +1,9 @@
 CREATE TABLE data(
     time    TIMESTAMPTZ NOT NULL,
-    zone    TEXT NOT NULL,
+    zoneid    TEXT NOT NULL,
     value   FLOAT NOT NULL,
-    PRIMARY KEY(time, zone)
+    PRIMARY KEY(time, zoneid)
 );
 
-CREATE INDEX ON data(zone, time DESC);
+CREATE INDEX ON data(zoneid, time DESC);
 SELECT * FROM create_hypertable('data', 'time');
