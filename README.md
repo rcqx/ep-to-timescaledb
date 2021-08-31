@@ -20,7 +20,11 @@ efficient approaches to BPS/AECO data exchange. In other words, thru linked-data
 models BPS information can be retrieved by the involved actors during different stages
 of a building development.
 
-In this example:
+This repo is based on [Gabe Fierro's data retrieval demo](https://github.com/gtfierro/brick-data-retrieval-demo);
+which uses BMS points data, [brickschema](https://brickschema.org/) and jupyter/timescaledb docker images.
+
+In this particular example:
+
 * An [EnergyPlus](https://energyplus.net/) model of an single storey
 office with 5 HVAC zones is simulated to report every zone temperature during the hottest day of the
 year. 
@@ -31,11 +35,9 @@ year.
 * Time series data is loaded to timescaledb
 * Semantic model and its relationships to timeseries data  are discovered, arrange and plotted. 
 
-More info on the energy model can be found on e+ ["Getting Started"](https://energyplus.net/sites/default/files/pdfs_v8.3.0/GettingStarted.pdf)
-The exercise is based on [Gabe Fierro's data retrieval demo](https://github.com/gtfierro/brick-data-retrieval-demo);
-which uses BMS data sets, [brickschema](https://brickschema.org/) and jupyter/timescaledb docker images.
+More info on the energy model can be found on e+ "./ExampleFiles/BasicFiles/exercise2.idf" and
+on the ["Getting Started"](https://energyplus.net/sites/default/files/pdfs_v8.3.0/GettingStarted.pdf).
 
- 
 
 
 
