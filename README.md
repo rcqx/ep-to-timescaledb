@@ -1,14 +1,11 @@
-# EP timeseries 
+# E+ timeseries to timescaleDB
 
-Time series in EnergyPlus facilitate
-readability an data exchange of simulation outputs. However, persistent file-based approaches
-hinder the integration of BPS/AECO data. In the BPS community,this is reflected
-in the inhability of simulation outputs to be consulted/retrieved by different stakeholders 
-during different stages of a building life cycle. 
+Time series in EnergyPlus facilitate data exchange of simulation outputs. However, persistent file-based approaches
+hinder integration of BPS/AECO data. This is reflected
+in the inhability of sim outputs to be retrieved by stakeholders 
+during different stages of a building life cycle. This makes BPS practice a repetitive and bulky task. 
 
-This BPS data lag makes BPS practice a repetitive and bulky task. 
-Thus, as migration from files to integrated data-based approaches is recognized
-for increasing data-level interoperability within different systems,
+Thus, as migration from files to integrated data-based approaches is increasing data-level interoperability within different systems,
 the use of Semantic Web Technologies (SWT) is gainining traction in the AECO. 
 SWT permit the creation of linked-data models over the web under W3C standards 
 (RDF, OWL, SPARQL, SKOS); facilitating understanding among 
@@ -20,7 +17,7 @@ efficient approaches to BPS/AECO data exchange. In other words, thru linked-data
 models BPS information can be retrieved by the involved actors during different stages
 of a building development.
 
-This repo is based on [Gabe Fierro's data retrieval demo](https://github.com/gtfierro/brick-data-retrieval-demo);
+This repo is based on [brick's data retrieval demo](https://github.com/gtfierro/brick-data-retrieval-demo) by [gtfierro](https://github.com/gtfierro);
 which uses BMS points data, [brickschema](https://brickschema.org/) and jupyter/timescaledb docker images.
 
 In this particular example:
@@ -36,8 +33,21 @@ year.
 * Semantic model and its relationships to timeseries data  are discovered, arrange and plotted. 
 
 More info on the energy model can be found on e+ "./ExampleFiles/BasicFiles/exercise2.idf" and
-on the ["Getting Started"](https://energyplus.net/sites/default/files/pdfs_v8.3.0/GettingStarted.pdf).
+on the ["Getting Started"](https://energyplus.net/sites/default/files/pdfs_v8.3.0/GettingStarted.pdf) guide.
 
+To gain access to exercise, first start docker containers:
+
+```
+# start docker containers
+./scripts/start_docker_containers.sh
+```
+
+Then load energyplus timseries data 
+
+```
+# load energyplus timeseries data
+./scripts/setup.sh
+```
 
 
 
