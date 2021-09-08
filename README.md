@@ -24,7 +24,7 @@ year.
 * Time series data is loaded to timescaledb
 * Semantic model and its relationships to timeseries data  are discovered, arrange and plotted. 
 
-![example](./script/example.png)
+![example](./img/example.png)
 
 More info on the energy model can be found on e+ "./ExampleFiles/BasicFiles/exercise2.idf" and
 on the ["Getting Started"](https://energyplus.net/sites/default/files/pdfs_v8.3.0/GettingStarted.pdf) guide.
