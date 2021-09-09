@@ -10,7 +10,7 @@ In other words,with the use of linked building representations (semantic models)
 of a project. 
 
 This repo is based on [brick's data retrieval demo](https://github.com/gtfierro/brick-data-retrieval-demo) by [gtfierro](https://github.com/gtfierro);
-which uses BMS points data, [brickschema](https://brickschema.org/) and jupyter/timescaledb docker images.
+which uses BMS data, [brickschema](https://brickschema.org/) and jupyter/timescaledb docker images.
 
 In this example:
 
