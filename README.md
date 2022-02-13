@@ -1,18 +1,15 @@
 # E+ timeseries to timescaleDB
 
-Time series in [EnergyPlus](https://energyplus.net/) facilitate data exchange of simulation outputs. However, file-based approaches
-hinder integration of BPS/AECO data. This is reflected in the inhability of sim outputs to be retrieved by stakeholders 
-during different stages of a project. Semantic Web Technology (SWT) is gainining traction in the AECO for increasing data interoperability.
-SWT permit the creation of linked-data models over the web (under W3C standard RDF, OWL, SPARQL, SKOS) facilitating data integration of disperse data sources.
+Time series in [EnergyPlus](https://energyplus.net/) facilitate exchange and representation of simulation data points. However, file-based approaches
+hinder integration of these outputs with AECO workflows. Semantic Web Technology (SWT) is gainining traction for increasing data interoperability.
+thru linked-data models over the web (under W3C standard RDF, OWL, SPARQL, SKOS).
 
-BPS community can take advantage of SWT and look for more efficient approaches to exchange/transfer BPS data among different AECO parties.
-In other words,with the use of linked building representations (semantic models), BPS outputs can be retrieved by the involved actors during different stages
-of a project. 
+Building Performance Simulation (BPS) community could take advantage of SWT for more efficient approaches to exchange/transfer BPS outputs among different AECO parties. In other words,with the use of linked building representations (semantic models), BPS outputs could be accessed by the involved actors during different stages of a project. 
 
 This repo is based on [brick's data retrieval demo](https://github.com/gtfierro/brick-data-retrieval-demo) by [gtfierro](https://github.com/gtfierro);
 which uses BMS data, [brickschema](https://brickschema.org/) and jupyter/timescaledb docker images.
 
-In this example:
+In this demonstration:
 
 * An [EnergyPlus](https://energyplus.net/) model of an single storey
 office with 5 HVAC zones is simulated to report every zone temperature during the hottest day of the
