@@ -1,5 +1,7 @@
 # E+ timeseries to timescaleDB
 
+![example](./img/cover.png)
+
 Time series in [EnergyPlus](https://energyplus.net/) facilitate exchange and representation of energy simulations data points. However, in AECO industry, file-based approaches hinder the integration of these outputs within different actors. Semantic Web Technology (SWT) is gainining traction for improving data interoperability thru linked-data models (RDF, OWL, SPARQL, SKOS). Building Performance Simulation (BPS) community could take advantage of SWT for more efficient approaches to exchange BPS data among different AECO parties.
 
 This repo is based on [brick's data retrieval demo](https://github.com/gtfierro/brick-data-retrieval-demo) by [gtfierro](https://github.com/gtfierro);
